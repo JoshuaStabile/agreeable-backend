@@ -32,7 +32,7 @@ Your tasks are:
    - Limit the company’s liability or require the user to cover damages (indemnity)
 3. Also flag vague, deceptive, or overly broad language.
 4. Output your response as a JSON object with two keys:
-   - "main_summary": A short paragraph summarizing the document's overall purpose and major takeaways.
+   - "mainSummary": A short paragraph summarizing the document's overall purpose and major takeaways.
    - "highlights": A list of highlight objects, each with:
        - "id": A unique sequential integer ID.
        - "text": The exact sentence text.
@@ -42,7 +42,7 @@ Your tasks are:
 Your JSON output should look like this:
 
 {
-  "mainSummary": "...",
+  "mainSummary": "This document explains the licensing terms for the software...",
   "highlights": [
     {
       "id": 1,
@@ -52,6 +52,6 @@ Your JSON output should look like this:
   ]
 }
 
-Do not include any other text or formatting outside of this JSON object.
+Do not include any other text or formatting outside of this JSON object. Ensure that the JSON is formatted correctly, including commas and closing brackets. 
 </agreeable-system-prompt>
 """
