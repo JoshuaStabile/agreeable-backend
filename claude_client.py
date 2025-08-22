@@ -15,7 +15,7 @@ def call_claude(messages: List[Message]) -> str:
     response = anthropic_client.messages.create(
         model=config.LLM_MODEL,
         max_tokens=config.MAX_TOKENS,
-        system=prompts.AGREEABLE_SYSTEM_PROMPT,
+        system=prompts.AGREEABLE_BACKGROUND_INFO + prompts.AGREEABLE_SYSTEM_PROMPT,
         
         messages=messages,
     )
