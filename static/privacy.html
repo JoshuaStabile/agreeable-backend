@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agreeable Extension - Privacy</title>
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FEEFE5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #00916E;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Quick Links */
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .quick-links a {
+            color: #00916E; 
+            text-decoration: none;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        .quick-links a:hover {
+            background-color: rgba(0, 140, 102, 0.1);
+        }
+
+        .quick-links .selected {
+            text-decoration: underline !important;
+        }
+
+        .body-container {
+            width: 50%; 
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <header>Agreeable</header>
+    <nav class="quick-links">
+        <a href="/eula">EULA</a>
+        <a href="/privacy" class="selected">Privacy</a>
+        <a href="https://ko-fi.com/agreeableapp">Donate</a>
+    </nav>
+
+    <div class="body-container">
+        <h2>Privacy Policy</h2>
+        <p>Agreeable is designed to provide functionality without ever collecting personal information.</p>
+
+        <h3>Information We Access</h3>
+        <p>Agreeable has access via Chrome Extension to the following:</p>
+        <ul>
+            <li>Detecting Your Active Tab</li>
+            <li>Accessing and managing extension settings via Chrome Storage</li>
+            <li>Reading Active Page Content</li>
+        </ul>
+        <p>All of these permissions have been reviewed and approved by the Chrome Web Store.</p>
+
+        <h3>Third-Party Services</h3>
+        <p>The Agreeable extension does not use any third-party analytics, trackers, or advertising services. Your usage remains private and local to your device.</p>
+
+        <h3>Updates to This Policy</h3>
+        <p>We may update this privacy policy occasionally. Any changes will be reflected on this page.</p>
+
+        <p>By using Agreeable, you acknowledge that your privacy is protected and that no personal information is collected.</p>
+    </div>
+</body>
+</html>

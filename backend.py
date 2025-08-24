@@ -1,8 +1,10 @@
 from fastapi import FastAPI, Request, HTTPException
+from fastapi.responses import FileResponse
 from claude_client import call_claude
 from messages.agreeable_message import AgreeeableMessage
 from rate_manager import RateManager
 import config
+import os
 
 from app_logger import get_logger
 
@@ -21,6 +23,16 @@ app = FastAPI()
 def health():
     logger.info("Health check requested")
     return {"status": "active"}
+
+@app.get("/eula")
+def eula():
+    path = os.path.join("static", "eula.html")
+    return FileResponse(path, media_type="text/html")
+
+@app.get("/privacy")
+def privacy():
+    path = os.path.join("static", "privacy.html")
+    return FileResponse(path, media_type="text/html")
 
 @app.post("/review_document")
 async def review_document(request: Request):
@@ -53,4 +65,3 @@ async def review_document(request: Request):
         raise HTTPException(status_code=500, detail="Internal server error")
 
     return result
-    
