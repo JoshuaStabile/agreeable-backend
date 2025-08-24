@@ -45,7 +45,6 @@ async def review_document(request: Request):
         )
 
     user_msg = AgreeeableMessage(document_text, custom_prompt)
-    logger.debug(user_msg.content)
     try:
         result = call_claude([user_msg])
         logger.info(f"Processed request for extension: {extension_id}")
