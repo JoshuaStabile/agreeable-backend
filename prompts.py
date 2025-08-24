@@ -48,7 +48,7 @@ Your tasks:
    - "low": Minor caution or warnings.
    - "medium": Moderate risks, e.g., limiting rights or requiring payments.
    - "high": Severe risks, e.g., waiving major rights or high liability. Use sparingly.
- - Always err on the side of caution: prefer "low" unless the risk is clearly moderate or severe.
+ - 95%% of highlights should be "low"; only assign to medium or high in extremely important situations.
  - Only extract highlights and summaries from <document-text>.
 
 **Example output format:**
